@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from "typeorm";
-import { Observable, from } from 'rxjs'
+import { Observable, from } from 'rxjs';
 import { CharacterEntity } from "../models/character.entity";
 import { CharacterModel } from "../models/character.interface";
 
