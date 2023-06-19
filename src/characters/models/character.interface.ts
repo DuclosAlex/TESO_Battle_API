@@ -1,6 +1,6 @@
 export interface CharacterModel {
 
-    id: number;
+    id?: number;
     name: string;
     
 }
