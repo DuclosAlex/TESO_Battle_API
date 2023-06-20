@@ -6,6 +6,6 @@ export class User {
     name: string;
     email: string;
     @IsString()
-    password?: string;
-    role: Role;
+    password: string;
+    role?: Role;
 }

@@ -21,6 +21,15 @@ export class CharacterCharacteristicsEntity {
     @Column()
     vitality: number;
 
+    @Column({ default : 0})
+    level: number;
+
+    @Column({ default : 0})
+    currentFrag: number;
+
+    @Column({ default : 0})
+    currentStar: number;
+
     @OneToOne(() => GlobalCharacterEntity, (globalCharacter) => globalCharacter.caracteristics)
     globalCharacter: GlobalCharacterEntity;
 }

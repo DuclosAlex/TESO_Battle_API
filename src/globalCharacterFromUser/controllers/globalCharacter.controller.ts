@@ -1,7 +1,6 @@
 import { Controller, Body, Get, Post, Param, ParseIntPipe } from '@nestjs/common';
 import  { Observable} from 'rxjs'
 import { GlobalCharacter } from '../models/globalCharacter.interface';
-import { GlobalCharacterEntity } from '../models/globalCharacter.entity';
 import { GlobalCharacterService } from '../services/globalCharacter.service';
 
 @Controller('globalCharacter')

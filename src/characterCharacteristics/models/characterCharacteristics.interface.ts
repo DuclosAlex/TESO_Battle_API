@@ -5,4 +5,7 @@ export interface CharacterCharacteristicsModel {
     speed: number;
     initiative: number;
     vitality: number;
+    level?: number;
+    currentFrag?: number;
+    currentStar?: number;
 }

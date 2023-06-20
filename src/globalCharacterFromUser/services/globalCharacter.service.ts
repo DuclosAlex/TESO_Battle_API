@@ -20,6 +20,10 @@ export class GlobalCharacterService {
         return from(this.globalCharacterRepository.findOne( {
             where : {
                 id: id
+            }, relations : {
+                user : true,
+                caracteristics :true,
+                character : true
             }
         }))
     }
