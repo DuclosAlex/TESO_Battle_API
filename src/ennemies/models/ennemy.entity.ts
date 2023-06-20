@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
+import { StageEntity } from 'src/stages/models/stage.entity';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 
 @Entity('ennemy')
 export class EnnemyEntity {
@@ -17,4 +18,6 @@ export class EnnemyEntity {
     @Column()
     alt: string;
 
+    @ManyToOne(() => StageEntity, (stage) => stage.ennemies)
+    stage: StageEntity;
 }

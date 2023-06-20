@@ -1,3 +1,4 @@
+import { StageEntity } from "src/stages/models/stage.entity";
 
 
 export interface EnnemyModel {
@@ -6,4 +7,5 @@ export interface EnnemyModel {
     name: string;
     src: string;
     alt: string;
+    stage: StageEntity;
 }

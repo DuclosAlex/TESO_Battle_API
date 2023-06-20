@@ -8,6 +8,7 @@ import { GlobalCharacterEntity } from 'src/globalCharacterFromUser/models/global
 import { UserEntity } from 'src/auth/models/auth.entity';
 import { CampaignEntity } from 'src/campaigns/models/campaign.entity';
 import { EnnemyEntity } from 'src/ennemies/models/ennemy.entity';
+import { StageEntity } from 'src/stages/models/stage.entity';
 
 @Injectable()
 export class TypeOrmConfigService implements TypeOrmOptionsFactory {
@@ -23,7 +24,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       username: this.config.get<string>('DATABASE_USER'),
       password: this.config.get<string>('DATABASE_PASSWORD'),
       entities : [ CharacterEntity, SkillEntity, CharacterCharacteristicsEntity, GlobalCharacterEntity, UserEntity,
-      CampaignEntity, EnnemyEntity,],
+      CampaignEntity, EnnemyEntity, StageEntity],
       synchronize: true, // never use TRUE in production!
     };
   }

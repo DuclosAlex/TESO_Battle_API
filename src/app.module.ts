@@ -8,6 +8,7 @@ import { GlobalCharacterModule } from './globalCharacterFromUser/globalCharacter
 import { AuthModule } from './auth/auth.module';
 import { CampaignModule } from './campaigns/campaigns.module';
 import { EnnemyModule } from './ennemies/ennemy.module';
+import { StageModule } from './stages/stage.module';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { EnnemyModule } from './ennemies/ennemy.module';
       synchronize : true,
     }),
     CharactersModule, SkillModule, CharacterCharacteristicsModule, GlobalCharacterModule, AuthModule,
-    EnnemyModule, CampaignModule,
+    EnnemyModule, CampaignModule, StageModule,
   ],
   controllers: [],
   providers: [],

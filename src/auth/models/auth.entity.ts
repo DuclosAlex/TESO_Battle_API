@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 import { Role } from "./auth.enum";
 import { GlobalCharacterEntity } from "src/globalCharacterFromUser/models/globalCharacter.entity";
 
