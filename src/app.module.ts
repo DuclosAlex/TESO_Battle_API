@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CharactersModule } from './characters/character.module';
 import { SkillModule } from './skills/skill.module';
+import { CharacterCharacteristicsModule } from './characterCharacteristics/characterCharacteristics.module';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { SkillModule } from './skills/skill.module';
       autoLoadEntities : true,
       synchronize : true,
     }),
-    CharactersModule, SkillModule,
+    CharactersModule, SkillModule, CharacterCharacteristicsModule
   ],
   controllers: [],
   providers: [],

@@ -10,5 +10,11 @@ export class CharacterEntity {
     name: string;
 
     @OneToMany(() => SkillEntity, (skills) => skills.character)
-    skills: SkillEntity[]
+    skills: SkillEntity[];
+
+    @Column()
+    src: string;
+
+    @Column()
+    alt: string;
 }
