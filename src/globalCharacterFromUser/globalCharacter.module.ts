@@ -11,4 +11,4 @@ import { GlobalCharacterService } from './services/globalCharacter.service';
     providers: [ GlobalCharacterService],
     controllers: [ GlobalCharacterController],
 })
-export class GlobalCharacterModule {}
+export class GlobalCharacterModule {};

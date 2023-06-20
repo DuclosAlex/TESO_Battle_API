@@ -6,6 +6,8 @@ import { SkillModule } from './skills/skill.module';
 import { CharacterCharacteristicsModule } from './characterCharacteristics/characterCharacteristics.module';
 import { GlobalCharacterModule } from './globalCharacterFromUser/globalCharacter.module';
 import { AuthModule } from './auth/auth.module';
+import { CampaignModule } from './campaigns/campaigns.module';
+import { EnnemyModule } from './ennemies/ennemy.module';
 
 @Module({
   imports: [
@@ -20,7 +22,8 @@ import { AuthModule } from './auth/auth.module';
       autoLoadEntities : true,
       synchronize : true,
     }),
-    CharactersModule, SkillModule, CharacterCharacteristicsModule, GlobalCharacterModule, AuthModule
+    CharactersModule, SkillModule, CharacterCharacteristicsModule, GlobalCharacterModule, AuthModule,
+    EnnemyModule, CampaignModule,
   ],
   controllers: [],
   providers: [],
