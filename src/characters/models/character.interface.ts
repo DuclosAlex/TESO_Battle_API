@@ -4,5 +4,10 @@ export interface CharacterModel {
     name: string;
     src: string;
     alt: string;
-    
+    description?: null | string;
+    speed : number;
+    initiative: number;
+    strength: number;
+    vitality: number;
+    lp: number;
 }

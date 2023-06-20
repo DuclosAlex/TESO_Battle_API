@@ -4,6 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CharactersModule } from './characters/character.module';
 import { SkillModule } from './skills/skill.module';
 import { CharacterCharacteristicsModule } from './characterCharacteristics/characterCharacteristics.module';
+import { GlobalCharacterModule } from './globalCharacterFromUser/globalCharacter.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,7 +20,7 @@ import { CharacterCharacteristicsModule } from './characterCharacteristics/chara
       autoLoadEntities : true,
       synchronize : true,
     }),
-    CharactersModule, SkillModule, CharacterCharacteristicsModule
+    CharactersModule, SkillModule, CharacterCharacteristicsModule, GlobalCharacterModule, AuthModule
   ],
   controllers: [],
   providers: [],

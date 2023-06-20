@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
+import { GlobalCharacterEntity } from 'src/globalCharacterFromUser/models/globalCharacter.entity';
 
 @Entity('characterCharacteristics')
 export class CharacterCharacteristicsEntity {
@@ -19,4 +20,7 @@ export class CharacterCharacteristicsEntity {
 
     @Column()
     vitality: number;
+
+    @OneToOne(() => GlobalCharacterEntity, (globalCharacter) => globalCharacter.caracteristics)
+    globalCharacter: GlobalCharacterEntity;
 }

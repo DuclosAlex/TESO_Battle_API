@@ -4,6 +4,8 @@ import { TypeOrmOptionsFactory, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { CharacterEntity } from 'src/characters/models/character.entity';
 import { SkillEntity } from 'src/skills/models/skill.entity';
 import { CharacterCharacteristicsEntity } from 'src/characterCharacteristics/models/characterCharacteristics.entity';
+import { GlobalCharacterEntity } from 'src/globalCharacterFromUser/models/globalCharacter.entity';
+import { UserEntity } from 'src/auth/models/auth.entity';
 
 
 @Injectable()
@@ -19,7 +21,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       database: this.config.get<string>('DATABASE_NAME'),
       username: this.config.get<string>('DATABASE_USER'),
       password: this.config.get<string>('DATABASE_PASSWORD'),
-      entities : [ CharacterEntity, SkillEntity, CharacterCharacteristicsEntity],
+      entities : [ CharacterEntity, SkillEntity, CharacterCharacteristicsEntity, GlobalCharacterEntity, UserEntity],
       synchronize: true, // never use TRUE in production!
     };
   }
