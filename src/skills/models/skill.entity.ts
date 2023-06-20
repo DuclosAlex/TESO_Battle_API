@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne, JoinColumn} from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne} from "typeorm";
 import { CharacterEntity } from "src/characters/models/character.entity";
 
 @Entity('skills')
@@ -15,7 +15,6 @@ export class SkillEntity {
     @Column()
     power: number;
 
-    @OneToOne(() => CharacterEntity)
-    @JoinColumn()
-    character: CharacterEntity;
+    @ManyToOne(() => CharacterEntity, (character) => character.skills)
+    character: CharacterEntity
 }
