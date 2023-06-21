@@ -23,4 +23,8 @@ export class CampaignService {
             }
         }))
     }
+
+    findAll(): Observable<CampaignModel[]> {
+        return from(this.campaignRepository.find());
+    }
 }

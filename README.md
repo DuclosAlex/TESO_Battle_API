@@ -1,8 +1,12 @@
 # Dev Log Teso Battle API 
 
+## 21/06/2023 
+
+Add Campaings in sql script. Add FindAll methods for Campaingns and start work on battle menu in front-end part to start connect back and front.
+
 ## 20/06/2023
 
-Work complete on most basics table for beginning Game. User table mae with bcrypt process, have to had some authentification middleware based on user Role. Start writing sql script to make test data for front dev. Add class-validator for userModel, had to explore more deeper this package. 
+Work complete on most basics table for beginning Game. User table made with bcrypt process, have to had some authentification middleware based on user Role and Log endpoint TODO. Start writing sql script to make test data for front dev. Add class-validator for userModel, had to explore more deeper this package. 
 
 !!! Dont' forget bcrypt/types with Typescript project !!! 
 

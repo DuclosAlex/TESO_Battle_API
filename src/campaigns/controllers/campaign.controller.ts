@@ -12,8 +12,16 @@ export class CampaignController {
         return this.campaignService.create(campaign);
     }
 
+    @Get('findAll')
+    findAll(): Observable<CampaignModel[]> {
+        return this.campaignService.findAll();
+       
+    }
+
     @Get(':id')
     findOne(@Param('id', ParseIntPipe) id: number): Observable<CampaignModel> {
         return this.campaignService.findByID(id)
     }
+
+    
 }

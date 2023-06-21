@@ -13,3 +13,10 @@ INSERT INTO public.characters(
     ('Merric at-Aswala', '/assets/character/merric', 'merric img', 15, 6, 72, 37, 1820);
 
 -- Sql Script for Campaigns 
+
+INSERT INTO public.campaign(
+	name, "levelNumber")
+	VALUES ( 'pacte de coeurébène', 2),
+    ('Alliance de Daguefillante', 2),
+    ('Domaine Aldmeri', 2);
+
