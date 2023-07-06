@@ -3,6 +3,7 @@
 ## 21/06/2023 
 
 Add Campaings in sql script. Add FindAll methods for Campaingns and start work on battle menu in front-end part to start connect back and front.
+!!! Issue with endpoint in campaing controller, apparently endpoint with param should be after other endpoint, if not endpoint without params can be reached !!! 
 
 ## 20/06/2023
 

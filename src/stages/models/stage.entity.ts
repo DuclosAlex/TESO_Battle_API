@@ -7,6 +7,9 @@ export class StageEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
+    @Column()
+    name: string;
+
     @Column( { default : false})
     isClear: boolean;
 

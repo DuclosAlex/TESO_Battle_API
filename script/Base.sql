@@ -15,8 +15,35 @@ INSERT INTO public.characters(
 -- Sql Script for Campaigns 
 
 INSERT INTO public.campaign(
-	name, "levelNumber")
-	VALUES ( 'pacte de coeurébène', 2),
-    ('Alliance de Daguefillante', 2),
-    ('Domaine Aldmeri', 2);
+	name, "levelNumber", "slug")
+	VALUES ( 'Pacte de coeurébène', 2, 'pact'),
+    ('Alliance de Daguefillante', 2, 'alliance'),
+    ('Domaine Aldmeri', 2, 'domain');
+
+
+-- TODO:  has to remove isClear after testing and move it into a relation table between stage and user !!! 
+
+INSERT INTO public.stage(
+	"name", "isClear", "stageNumber", "campaignId")
+	VALUES ('Pacte 1', true, 1, 1),
+    ('Pacte 2', true, 2, 1),
+    ('Pacte 3', true, 3, 1),
+    ('Pacte 4', true, 4, 1),
+    ('Pacte 5', true, 5, 1),
+    ('Pacte 6', true, 6, 1),
+    ('Pacte 7', true, 7, 1),
+    ('Alliance 1', true, 1, 2),
+    ('Alliance 2', true, 2, 2),
+    ('Alliance 3', true, 3, 2),
+    ('Alliance 4', true, 4, 2),
+    ('Alliance 5', true, 5, 2),
+    ('Alliance 6', true, 6, 2),
+    ('Alliance 7', true, 7, 2),
+    ('Domaine 1', true, 1, 3),
+    ('Domaine 2', true, 2, 3),
+    ('Domaine 3', true, 3, 3),
+    ('Domaine 4', true, 4, 3),
+    ('Domaine 5', true, 5, 3),
+    ('Domaine 6', true, 6, 3),
+    ('Domaine 7', true, 7, 3);
 
